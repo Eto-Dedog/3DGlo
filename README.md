@@ -1,1 +1,1 @@
-# https://eto-dedog.github.io/Lesson17/
+# https://eto-dedog.github.io/3DGlo/ | Lesson17
