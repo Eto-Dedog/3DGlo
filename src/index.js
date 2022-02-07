@@ -6,7 +6,7 @@ import tabs from './modules/tabs'
 import slider from './modules/slider'
 import calc from './modules/calc'
 
-timer('31 january 2022')
+timer('28 feb 2022')
 menu()
 modal()
 valid()
