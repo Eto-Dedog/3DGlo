@@ -5,6 +5,7 @@ import valid from './modules/valid'
 import tabs from './modules/tabs'
 import slider from './modules/slider'
 import calc from './modules/calc'
+import scroll from './modules/scroll'
 
 timer('28 feb 2022')
 menu()
@@ -13,3 +14,4 @@ valid()
 tabs()
 slider()
 calc()
+scroll()
