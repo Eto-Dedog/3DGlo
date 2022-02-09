@@ -32,6 +32,22 @@ const calc = (price = 100) => {
     }
 
     total.textContent = totalValue;
+
+    const counterAnim = (qSelector, start = 0, end, duration = 1000) => {
+      const target = document.querySelector("#total");
+      qSelector = target
+      let startTimestamp = null;
+      const step = (timestamp) => {
+          if (!startTimestamp) startTimestamp = timestamp;
+          const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+          target.innerText = Math.floor(progress * (end - start) + start);
+          if (progress < 1) {
+              window.requestAnimationFrame(step);
+          }
+      };
+        window.requestAnimationFrame(step);
+    };
+    counterAnim("#counter", 0, totalValue, 1000);
   };
 
   calcBlock.addEventListener("input", (e) => {
@@ -44,6 +60,8 @@ const calc = (price = 100) => {
       countCalc();
     }
   });
+
+
 };
 
 export default calc;
